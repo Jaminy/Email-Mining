@@ -1,0 +1,10 @@
+Project schedule:
+Week 1 and 2:
+
+-Getting familiar with Python and coding for connecting to an email account (using IMAP) and examines every message in every folder.
+
+-Writing a basic Python script to look at the "To", "From" and "CC" headers of every email message in the folder. Identifying all the names and email addresses and writing them in a CSV file.
+
+-Scanning the body of each message looking for phone numbers.(for messages in plain text format)
+
+-Cleaning up the phone numbers and write them in international format and putting those in the CSV file too.
