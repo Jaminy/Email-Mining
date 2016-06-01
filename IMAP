@@ -1,0 +1,5 @@
+import imaplib
+mail = imaplib.IMAP4_SSL('imap.gmail.com')
+mail.login('myusername@gmail.com', 'mypassword')
+mail.list()
+mail.select("inbox") # connect to inbox.
