@@ -19,3 +19,5 @@
 []
 >>> message.get_addresses('bcc')
 []
+>>> import imapclient
+>>> imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
