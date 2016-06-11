@@ -9,15 +9,15 @@ latest_email_uid = data[0].split()[-1]
 result, data = mail.uid('fetch', latest_email_uid, '(RFC822)')
 raw_email = data[0][1]
 
-import email
-email_message = email.message_from_string(raw_email)
- 
-print email_message['To']
-print email_message['CC']
- 
-print email.utils.parseaddr(email_message['From']) 
- 
-print email_message.items()
+from email.parser import Parser
+parser = Parser()
+
+emailText = raw_email
+email = parser.parsestr(emailText)
+
+print email.get('From')
+print email.get('To')
+print email.get('Subject')
 
 if email.is_multipart():
     for part in email.get_payload():
