@@ -1,6 +1,16 @@
 import imaplib
+import email
+
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('username@gmail.com', 'password')
+try:
+    M.login('jaminy1234@gmail.com', getpass.getpass())
+except imaplib.IMAP4.error:
+    print "LOGIN FAILED!!! "
+
+rv, mailboxes = M.list()
+if rv == 'OK':
+    print "Mailboxes:"
+    print mailboxes
 mail.list() #Lists the folders in the gmail
 mail.select("inbox") # connect to inbox.
 
