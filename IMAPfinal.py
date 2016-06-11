@@ -3,7 +3,7 @@ import email
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 try:
-    M.login('jaminy1234@gmail.com', getpass.getpass())
+    mail.login('jaminy1234@gmail.com', getpass.getpass())
 except imaplib.IMAP4.error:
     print "LOGIN FAILED!!! "
 
