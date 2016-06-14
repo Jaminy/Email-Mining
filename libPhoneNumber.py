@@ -11,3 +11,5 @@ print z
 phonenumbers.is_possible_number(z)
  phonenumbers.is_valid_number(z)
  
+ phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+ 
