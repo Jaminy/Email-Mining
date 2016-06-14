@@ -1,9 +1,13 @@
 import phonenumbers
-x = phonenumbers.parse("+442083661177", None)
+x = phonenumbers.parse("+442084222233", None)
 print x
 type(x)
- y = phonenumbers.parse("020 8366 1177", "GB")
+ y = phonenumbers.parse("02084222233", "GB")
  print y
   x == y
   
-  
+  z = phonenumbers.parse("+120012301", None)
+print z
+phonenumbers.is_possible_number(z)
+ phonenumbers.is_valid_number(z)
+ 
