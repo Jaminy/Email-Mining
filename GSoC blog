@@ -3,14 +3,21 @@ Week 1 and 2:
 
 -Getting familiar with Python and coding for connecting to an email account (using IMAP) and examines every message in every folder.
 Telify:Telify recognizes phone numbers on web pages or in email messages and converts them into clickable links. 
-This works with many CTI applications, SIP clients, Skype, Netmeeting, snom phones, the AGFEO TK-Suite client, SerVonic IXI-PCS and others.
-In general, all telephony software, devices or interfaces which can be controlled by using a URL, will most likely enable you to call a phone number directly from your browser or email client.
+This works with many CTI applications, SIP clients, Skype, Netmeeting, snom phones, the AGFEO TK-Suite client, 
+SerVonic IXI-PCS and others.
+In general, all telephony software, devices or interfaces which can be controlled by using a URL, will most likely
+enable you to call a phone number directly from your browser or email client.
 
--Writing a basic Python script to look at the "To", "From" and "CC" headers of every email message in the folder. Identifying all the names and email addresses and writing them in a CSV file.
+-Writing a basic Python script to look at the "To", "From" and "CC" headers of every email message in the folder. 
+Identifying all the names and email addresses and writing them in a CSV file.
 
 -Scanning the body of each message looking for phone numbers.(for messages in plain text format)
 
 -Cleaning up the phone numbers and write them in international format and putting those in the CSV file too.
+
+Do you have phone numbers in email messages that you have never copied to your address book?  Would you like 
+a systematic way to find them and compare the to your address book?  In my GSoC project, I
+am examining messages in IMAP folders looking for phone numbers and other data.
 
 import imaplib
 import email
