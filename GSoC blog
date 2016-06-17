@@ -35,6 +35,10 @@ if rv == 'OK':
 mail.list() #Lists the folders in the gmail
 mail.select("inbox") # connect to inbox.
 
+
+Weeek 3 and 4:
+Started coding Python in Debian.
+
 result, data = mail.uid('search', None, "ALL")  # search and return uids instead
 latest_email_uid = data[0].split()[-1]
 result, data = mail.uid('fetch', latest_email_uid, '(RFC822)')
