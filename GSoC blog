@@ -60,3 +60,6 @@ if email.is_multipart():
 else:
     print email.get_payload()
 
+Week 3 and4
+
+Python coding in Debian
