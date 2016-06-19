@@ -1,5 +1,6 @@
 import imaplib
 import email
+import getpass
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 try:
@@ -7,7 +8,7 @@ try:
 except imaplib.IMAP4.error:
     print "LOGIN FAILED!!! "
 
-rv, mailboxes = M.list()
+rv, mailboxes = mail.list()
 if rv == 'OK':
     print "Mailboxes:"
     print mailboxes
@@ -34,3 +35,4 @@ if email.is_multipart():
         print part.get_payload()
 else:
     print email.get_payload()
+email.logout
