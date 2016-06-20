@@ -37,29 +37,32 @@ mail.select("inbox") # connect to inbox.
 
 
 Weeek 3 and 4:
-Started coding Python in Debian.
+According to the week plans I have worked on
 
-result, data = mail.uid('search', None, "ALL")  # search and return uids instead
-latest_email_uid = data[0].split()[-1]
-result, data = mail.uid('fetch', latest_email_uid, '(RFC822)')
-raw_email = data[0][1]
+Scanning the body of each message looking for phone numbers.(for messages in plain text format)
+Cleaning up the phone numbers and write them in international format and putting those in the CSV file too.
+I have used regex library file to extract numbers from the text and phonenumbers 7.4.2 library file to write them int international format.
 
-from email.parser import Parser
-parser = Parser()
+I am writing detailed blog on my weekly report on https://jaminyprabaharan.wordpress.com/.Stay tuned.
 
-emailText = raw_email
-email = parser.parsestr(emailText)
+>>> y=re.findall(r'\d+', 'hello +94716772265')
+>>> y
+['94716772265']
+>>> print y
+['94716772265']
+>>> z=phonenumbers.parse("+" + y[0])
+>>> print z
+Country Code: 94 National Number: 716772265
+>>> z=phonenumbers.parse("+", "US")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "build/bdist.linux-x86_64/egg/phonenumbers/phonenumberutil.py", line 2576, in parse
+phonenumbers.phonenumberutil.NumberParseException: (1) The string supplied did not seem to be a phone number.
+>>> z
+PhoneNumber(country_code=94, national_number=716772265, extension=None, italian_leading_zero=None, number_of_leading_zeros=None, country_code_source=None, preferred_domestic_carrier_code=None)
+>>> phonenumbers.is_possible_number(z)
+True
+>>> phonenumbers.is_valid_number(z)
+True
 
-print email.get('From')
-print email.get('To')
-print email.get('Subject')
 
-if email.is_multipart():
-    for part in email.get_payload():
-        print part.get_payload()
-else:
-    print email.get_payload()
-
-Week 3 and4
-
-Python coding in Debian
