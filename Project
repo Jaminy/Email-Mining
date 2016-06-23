@@ -1,0 +1,23 @@
+Overview
+To improve voice, video and chat communications with free software to enable
+alternatives to the commercial heavyweights like Skype or WhatsApp, and Viber.
+Goals
+1. Helping people to avoid using proprietary communications tools like Skype,
+Viber and WhatsApp.
+2. Learning about SIP, XMPP, and peer­to­peer technology.
+3. Simplifying the setup of free alternatives like Jitsi, Linphone, Ekiga, Tox
+(qtox), Mumble and their correspondent group and conference setups.
+Descriptions
+When it comes to voice and video over IP, most people nowadays are quick to use
+Skype, Whatsapp, or Viber. These systems come with a big community of people
+though this SOftware is only free as free as in beer. Protocols and proprietary,
+privacy is basically non existent. There are though several free alternatives like
+Jitsi, Linphone, Ekiga, Tox (qtox) and Mumble. However, the communities are
+often small and due to a lack of servers firewall traversal can be very cumbersome.
+Even if all these techniques are also available as open source software (ice turn
+server, siproxy, jitsi conference bridge, asterix, freesip), bootstrapping any business
+relevant network based on these free alternatives is still hard. Automatic
+dependency resolution does actually help in debian, however integration and
+configuration could be greatly simplified. This project will evaluate options to
+achieve this simplification and integrate necessary changes and documentation into
+the respective debian packages. 
