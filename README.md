@@ -1,1 +1,2 @@
-This is my first GSoC task on email mining.
+Imroving video, voice and chat communication with free software.
+1. Email mining
