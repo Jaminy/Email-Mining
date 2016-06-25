@@ -1,0 +1,46 @@
+GSoC-Journey till Mid term
+Hi readers,
+
+Here comes my journey till the mid-term (June 21st) as a blog to share my experience.
+
+I  have previously worked on some social related projects such as “smart guidance for blind” and “sensor based wireless controller”.
+I have been selected as a speaker for FOSSASIA-16 (Asia’s premier technological event)to talk on the project “smart guidance for blind”.
+FOSSASIA speakers. It was a great experience participating in the technological event in Singapore science centre.Got an opportunity to
+meet open source contributors from all over the world(even though it is an Asian event, participation was all over from the world). 
+There were pre-meetups for FOSSASIA on the day before three-day event.I have attended the one organised by RedHat, Singapore.Discussed 
+on many topics related to open source.
+
+Three days of FOSSASIA event was a great experience.It was the second time as a speaker in an international conference.My talk was on
+the second day.Sharing is the best way to increase your knowledge. Talks and workshops were brainstorming.Learnt many new things and
+got the courage to contribute to the open source.Met Daniel Pocock in Debian exhibition table.Meeting awesome people can be the turning
+point of life.Had a discussion about the Debian projects and it motivated me for open source software.We have discussed about the Real 
+Time Communication and was encouraged to apply for GSoC  (Google Summer of Code). As per our discussion, prepared the project proposal 
+on “improving voice,video and chat communication with free software” and submitted it for GSoC. I have been selected to contribute for 
+Debian with stipend from Google.
+
+This was my first application for GSoC and I have been selected to contribute for open source and free software. I would like to thank 
+Google and Debian for giving this amazing experience.
+
+Learning and coding have begun.Updated my laptop with Jessie, latest version of Debian.Get acquainted with the new platform.Got to learn
+many things about Real Time Communication.Learnt more about SIP, XMPP, peer-to-peer technology to work on my project.It’s always better
+to be clear with theory before coding.When it comes to voice and video over IP, most people nowadays are quick to use Skype, Whatsapp, 
+or Viber. My main goals of the project are helping people to avoid using proprietary communications tools like Skype, Viber and WhatsApp
+and simplifying the setup of free alternatives like Jitsi, Linphone, Ekiga, Tox (qtox), Mumble.Downloaded some of the already available
+open source VoIP to find the problems behind it and improve it further.Bootstrapping any business relevant network based on these free
+alternatives is still hard.
+
+Would you like to list the senders, receivers and date of the messages in the inbox  of your mail.Python has a library file IMAP which 
+can be used to connect to an email account, examine every message in every folder and look at the “To”, “From” and “CC” headers of 
+every email message in the folder.
+
+Do you have phone numbers and other contact details in old emails? Would you like a quick way to data-mine your inbox to find them and
+help migrate them to your address book? Got the help from phonenumbers library for parsing, formatting, and validating international 
+phone numbers.I would like to share how I imported this library file into my coding.Download the given library file and open the file
+in the terminal.Type $ python setup.py to install the library file.Now you can call the functions by importing phonenumbers.
+
+Iain R. Learmonth joined my journey as a mentor.Helped in solving some issues in my coding through GitHub.
+
+You can go through the code in my GitHub profile here.(Recently started committing my projects in GitHub)
+
+It was a wonderful journey till now.Will be working further to improve voice, video and chat communication with free software.
+Stay connected to know more about my  further journey through GSoC.
