@@ -30,9 +30,12 @@ print email.get('From')
 print email.get('To')
 print email.get('Subject')
 
-if email.is_multipart():
+'''if email.is_multipart():
     for part in email.get_payload():
         print part.get_payload()
 else:
     print email.get_payload()
+'''
+exml =lxml.html.fromstring(text)
+exml.test_content()
 email.logout
