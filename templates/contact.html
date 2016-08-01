@@ -1,0 +1,11 @@
+<h1>{{ c['realname'] }}</h1>
+<img src="{{ c['gravatar'] }}" style="float: right;">
+<ul>
+	<li><a href="mailto:{{ c['email'] }}">{{ c['email'] }}</a></li>
+</ul>
+<h2>Recent Mails</h2>
+<ul>
+	{% for mail in c['mails'] %}
+	<li>{{ mail[0] }} - {{ mail[1] }}</li>
+	{% endfor %}
+</ul>
