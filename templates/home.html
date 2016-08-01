@@ -1,0 +1,7 @@
+<h1>Mailbox Mining</h1>
+
+<ul>
+	{% for contact in contacts.keys() %}
+	<li><a href="/contact/{{ contact }}">{{ contacts[contact]['realname'] }} &lt;{{ contact }}&gt;</a></li>
+	{% endfor %}
+</ul>
