@@ -48,10 +48,16 @@ for uid in uids:
         contacts[sender]['mails'] = []
 
     contacts[sender]['mails'].append((email.get('Subject'), email.get('Date')))
+    
+PN = re.findall(r'\d+', 'hello +94716772265')
+No = phonenumbers.parse("+" + PN[0])
+phonenumbers.is_possible_number(No)
+phonenumbers.is_valid_number(No)
 
 ##### Web Frontend
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def home():
