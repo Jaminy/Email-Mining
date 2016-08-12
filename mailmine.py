@@ -53,6 +53,7 @@ PN = re.findall(r'\d+', 'hello +94716772265')
 No = phonenumbers.parse("+" + PN[0])
 phonenumbers.is_possible_number(No)
 phonenumbers.is_valid_number(No)
+contacts[sender]['PhoneNumber'] = No
 
 ##### Web Frontend
 
