@@ -48,8 +48,18 @@ for uid in uids:
         contacts[sender]['mails'] = []
 
     contacts[sender]['mails'].append((email.get('Subject'), email.get('Date')))
+
+if email.is_multipart():
+    for part in email.get_payload():
+        print part.get_payload()
+else:
+    print if email.is_multipart():
+    for part in email.get_payload():
+        print part.get_payload()
+else:
+    print email.get_payload()
     
-PN = re.findall(r'\d+', 'hello +94716772265')
+PN = re.findall(r'\d+', email.get_payload() )
 No = phonenumbers.parse("+" + PN[0])
 phonenumbers.is_possible_number(No)
 phonenumbers.is_valid_number(No)
