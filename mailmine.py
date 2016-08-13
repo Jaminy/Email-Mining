@@ -53,6 +53,7 @@ PN = re.findall(r'\d+', 'hello +94716772265')
 No = phonenumbers.parse("+" + PN[0])
 phonenumbers.is_possible_number(No)
 phonenumbers.is_valid_number(No)
+<a href="tel:1234567890">123-456-789</a>
 
 ##### Web Frontend
 
@@ -66,6 +67,8 @@ def home():
 @app.route("/contact/<contact>")
 def contact(contact):
     return render_template("contact.html", c=contacts[contact])
+    
+<a href>PN</a>
 
 if __name__ == "__main__":
         app.run(debug=True)
