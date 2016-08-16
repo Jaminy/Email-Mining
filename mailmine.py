@@ -1,3 +1,4 @@
+import re
 import imaplib
 import email
 import getpass
@@ -6,6 +7,7 @@ from email.utils import parseaddr
 from flask import Flask, jsonify, render_template
 import logging
 from hashlib import md5
+import phonenumbers
 
 ##### Set up some global data structures
 
@@ -46,13 +48,24 @@ for uid in uids:
         contacts[sender]['realname'] = sender_realname
         contacts[sender]['gravatar'] = "https://www.gravatar.com/avatar/" + md5(sender.strip().lower()).hexdigest()
         contacts[sender]['mails'] = []
+        contacts[sender]['tel'] = []
 
     contacts[sender]['mails'].append((email.get('Subject'), email.get('Date')))
-    
-PN = re.findall(r'\d+', 'hello +94716772265')
-No = phonenumbers.parse("+" + PN[0])
-phonenumbers.is_possible_number(No)
-phonenumbers.is_valid_number(No)
+
+    if email.is_multipart():
+        for part in email.get_payload():
+            body = part.get_payload()
+    else:
+        body = email.get_payload()
+
+    discovered_numbers = re.findall(r'[\d \(\)-]+', body)
+    for discovered_number in discovered_numbers:
+        try:
+            number = phonenumbers.parse(discovered_number, "GB")
+            if phonenumbers.is_valid_number(number):
+                contacts[sender]['tel'].append(phonenumbers.format_number(number, phonenumbers.PhoneNumberFormat.E164))
+        except phonenumbers.NumberParseException:
+            pass
 
 ##### Web Frontend
 

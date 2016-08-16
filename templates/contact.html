@@ -3,6 +3,12 @@
 <ul>
 	<li><a href="mailto:{{ c['email'] }}">{{ c['email'] }}</a></li>
 </ul>
+<h2>Mined Contact Details</h2>
+<ul>
+	{% for tel in c['tel'] %}
+        <li><a href="tel:{{ tel }}">{{ tel }}</a></li>
+        {% endfor %}
+</ul>
 <h2>Recent Mails</h2>
 <ul>
 	{% for mail in c['mails'] %}
