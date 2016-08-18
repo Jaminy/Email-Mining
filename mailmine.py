@@ -8,6 +8,7 @@ from flask import Flask, jsonify, render_template
 import logging
 from hashlib import md5
 import phonenumbers
+import collections
 
 ##### Set up some global data structures
 
@@ -66,6 +67,11 @@ for uid in uids:
                 contacts[sender]['tel'].append(phonenumbers.format_number(number, phonenumbers.PhoneNumberFormat.E164))
         except phonenumbers.NumberParseException:
             pass
+
+
+counters = collections.defaultdict(collections.Counter)
+counters[email['From']] += 1
+counters[email['From']] [date.hour]+= 1
 
 ##### Web Frontend
 
