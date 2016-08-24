@@ -70,8 +70,8 @@ for uid in uids:
 
 
 counters = collections.defaultdict(collections.Counter)
-counters[email['From']] += 1
-counters[email['From']] [date.hour]+= 1
+counters[email.get('From')] += 1
+counters[email.get('From')] [date.hour]+= 1
 
 ##### Web Frontend
 
